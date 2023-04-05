@@ -30,5 +30,6 @@ public class LoginScript
         driver.findElement (By.xpath ("//a[@style='color:#ffffff']")).click ();
 
         driver.quit ();
+        driver.close ();
     }
 }
