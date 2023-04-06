@@ -25,8 +25,6 @@ public class LoginScript
         WebElement element = wait.until (ExpectedConditions.visibilityOfElementLocated (By.xpath ("//input[@id='password']")));
         driver.findElement (By.xpath ("//input[@id='password']")).sendKeys ("Password123");
         driver.findElement (By.id ("submit")).click ();
-        //element.wait (10);
-        //driver.wait (10000);
         driver.findElement (By.xpath ("//a[@style='color:#ffffff']")).click ();
 
         driver.quit ();
