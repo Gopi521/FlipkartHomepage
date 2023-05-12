@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>groupId</groupId>
-    <artifactId>FlipkartHomepage</artifactId>
+    <artifactId>FlipkartHome_Furniture</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -32,7 +32,7 @@
         <scope>compile</scope>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+
     <dependency>
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>

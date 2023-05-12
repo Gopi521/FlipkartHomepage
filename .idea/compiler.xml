@@ -6,8 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="FlipkartHomepage" />
+        <module name="FlipkartHome_Furniture" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="FlipkartHome_Furniture" options="--add-exports java.base/sun.net.ftp.impl=ALL-UNNAMED" />
+    </option>
   </component>
 </project>
