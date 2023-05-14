@@ -7,8 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
-import static FlipkartHome_Furniture.FlipkartBaseClass.driver;
-
 public class Flipkart_MouseHover
 {
     public static void main(String[] args)

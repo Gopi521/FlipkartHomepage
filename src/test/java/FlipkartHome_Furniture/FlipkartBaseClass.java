@@ -1,6 +1,8 @@
 package FlipkartHome_Furniture;
 
 import com.microsoft.edge.seleniumtools.EdgeDriver;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -8,7 +10,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebElement;
 
+import javax.swing.text.Element;
 import java.io.File;
 import java.time.Duration;
 import java.util.logging.LogManager;
@@ -18,10 +22,9 @@ public class FlipkartBaseClass {
     public static WebDriver driver;
     public static String baseUrl;
 
-    //public static ExtentReports;
+    //public static ExtentReports ER;
     public static String browser = "chrome";
-
-    //  public static Logger logger = LogManager.getLogManager ().getLogger (FlipkartBaseClass.class.getName ());
+    //public static Logger logger = LogManager.getLogManager ().getLogger (FlipkartBaseClass.class.getName ());
     public static void openBrowser(String browserName, String baseUrl) {
         if (browserName.equalsIgnoreCase ("chrome")) {
             WebDriverManager.chromedriver ().setup ();
@@ -31,7 +34,7 @@ public class FlipkartBaseClass {
             options.addArguments ("--remote-allow-origins=*");
             driver = new ChromeDriver (options);
             driver.get (baseUrl);
-            driver.manage ().timeouts ().implicitlyWait (Duration.ofSeconds (10));
+            driver.manage ().timeouts ().implicitlyWait(Duration.ofSeconds (10));
         } else if (browserName.equalsIgnoreCase ("firefox")) {
             WebDriverManager.firefoxdriver ().setup ();
             driver = new FirefoxDriver ();
@@ -50,7 +53,7 @@ public class FlipkartBaseClass {
     public static void takeScreenshot(String screenshotName) throws Exception {
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs (OutputType.FILE);
         FileUtils.copyFile (srcFile, new File ("ScreenShot/" + screenshotName + ".png"));
-        // logger.info ("Take Screen shot" + screenshotName);
+        //logger.info ("Take Screen shot" + screenshotName);
     }
 
     public static void LoinPopup() {
@@ -63,7 +66,7 @@ public class FlipkartBaseClass {
         public static void closeBrowser()
         {
             driver.quit ();
-            // logger.info ("Browser close successfully ");
+           // logger.info ("Browser close successfully ");
 
         }
 

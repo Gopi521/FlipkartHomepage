@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="FlipkartHome_Furniture" options="--add-exports java.base/sun.net.ftp.impl=ALL-UNNAMED" />
+      <module name="FlipkartHome_Furniture" options="" />
     </option>
   </component>
 </project>
