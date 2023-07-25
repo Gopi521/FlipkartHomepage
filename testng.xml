@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Selenium soft/SeleniumProject/FlipkartHomepage">
+        <classes>
+            <class name="Objects.Flipkart_Home_TestCases">
+                <methods>
+                <include name="TC003"/>
+                    <include name="TC004"/>
+                    <include name="TC005"/>
+                    <include name="TC007"/>
+                    <include name="TC008"/>
+                    <include name="TC009"/>
+                    <include name="TC010"/>
+                    <include name="TC011"/>
+                    <include name="TC012"/>
+                    <include name="TC013"/>
+                    <include name="TC014"/>
+                    <include name="TC015"/>
+                    <include name="TC016"/>
+                    <include name="TC017"/>
+                    <include name="TCO18"/>
+                    <include name="TCO19"/>
+                    <include name="TC020"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

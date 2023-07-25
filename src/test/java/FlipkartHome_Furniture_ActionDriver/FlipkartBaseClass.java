@@ -1,27 +1,23 @@
-package FlipkartHome_Furniture;
+package FlipkartHome_Furniture_ActionDriver;
+
 
 import com.microsoft.edge.seleniumtools.EdgeDriver;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebElement;
 
-import javax.swing.text.Element;
 import java.io.File;
 import java.time.Duration;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
 
 public class FlipkartBaseClass {
     public static WebDriver driver;
     public static String baseUrl;
-
     //public static ExtentReports ER;
     public static String browser = "chrome";
     //public static Logger logger = LogManager.getLogManager ().getLogger (FlipkartBaseClass.class.getName ());
@@ -45,7 +41,7 @@ public class FlipkartBaseClass {
             driver.manage ().timeouts ().implicitlyWait (Duration.ofSeconds (10));
         }
         driver.manage ().window ().maximize ();
-        //logger.info (browserName +"Lunch browser successfully ");
+       // logger.info (browserName +"Launch browser successfully ");
         driver.get (baseUrl);
         driver.getCurrentUrl ();
     }
@@ -63,10 +59,15 @@ public class FlipkartBaseClass {
             driver.findElement (By.xpath ("//button[@class='_2KpZ6l _2doB4z']")).click ();
         }
     }
+    public static void Wait_Method(){
+        driver.manage ().timeouts ().implicitlyWait (Duration.ofSeconds (10));
+        driver.manage ().timeouts ().pageLoadTimeout (Duration.ofSeconds (40));
+
+    }
         public static void closeBrowser()
         {
             driver.quit ();
-           // logger.info ("Browser close successfully ");
+          // logger.info ("Browser close successfully ");
 
         }
 
